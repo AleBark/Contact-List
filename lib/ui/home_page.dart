@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:contact_list_app/helpers/contact_helper.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'contact_page.dart';
 
@@ -106,7 +107,10 @@ class _HomePageState extends State<HomePage> {
                             "Call",
                             style: TextStyle(color: Colors.red, fontSize: 20.0),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            launch("tel:${contacts[index]}.phone");
+                            Navigator.pop(context);
+                          },
                         )),
                     Padding(
                         padding: EdgeInsets.all(8.0),
