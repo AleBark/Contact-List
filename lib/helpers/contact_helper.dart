@@ -98,9 +98,11 @@ class Contact {
   String phone;
   String img;
 
+  Contact();
+
   Contact.fromMap(Map map) {
     id = map[idColumn];
-    name = map[idColumn];
+    name = map[nameColumn];
     email = map[emailColumn];
     phone = map[phoneColumn];
     img = map[imgColumn];
